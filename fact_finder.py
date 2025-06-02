@@ -276,22 +276,6 @@ class FactFind(BaseModel):
         return cls.model_json_schema()
 
 
-class Step(BaseModel):
-    explanation: str = Field(
-        description="Clear explanation of what information was found and how it was interpreted"
-    )
-    output: str = Field(
-        description="The specific data extracted or decision made for this field"
-    )
-
-
-class FinalAnswer(BaseModel):
-    steps: list[Step] = Field(
-        description="Step-by-step reasoning for each major section of the fact-find"
-    )
-    fact_find: FactFind = Field(description="Complete structured fact-find data")
-
-
 SYSTEM_PROMPT = """
 You are an experienced paraplanner working for a regulated financial advisory firm. Your role is to extract and structure client information from meeting transcripts into a standardized Customer Information Form (CIF) format.
 

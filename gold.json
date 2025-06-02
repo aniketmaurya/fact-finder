@@ -1,0 +1,109 @@
+{
+    "personal_details": {
+      "client1": {
+        "first_name": "Jerome",
+        "last_name": "Wantsome", 
+        "date_of_birth": "1960-11-01", 
+        "marital_status": "Married"
+      },
+      "client2": {
+        "first_name": "Jennifer",
+        "last_name": "Wantsome",
+        "date_of_birth": "1960-07-01",
+        "marital_status": "Married"
+      }
+    },
+    "employment": {
+      "client1": {
+        "occupation": "Logistics Manager",
+        "employer": "Not specified",
+        "desired_retirement_age": 65
+      },
+      "client2": {
+        "occupation": "Customer Service Associate",
+        "employer": "Kroger",
+        "employment_status": "Part time"
+      }
+    },
+    "incomes": [
+      {
+        "owner": "Client1",
+        "name": "Salary",
+        "amount": 43000,
+        "frequency": "Annual",
+        "net_gross": "Gross"
+      },
+      {
+        "owner": "Client2", 
+        "name": "Part-time wages",
+        "amount": 11000,
+        "frequency": "Annual",
+        "net_gross": "Gross"
+      }
+    ],
+    "expenses": {
+      "housing_expenses": [
+        {
+          "name": "Household expenses",
+          "amount": 8000,
+          "frequency": "Annual",
+          "notes": "Property taxes, utilities, unavoidable expenses"
+        }
+      ]
+    },
+    "pensions": [
+      {
+        "owner": "Client1",
+        "type": "Workplace 401k",
+        "provider": "Vanguard", 
+        "value": 33000,
+        "contributions": "5% employee, 3% employer match"
+      },
+      {
+        "owner": "Client1",
+        "type": "IRA",
+        "provider": "Fidelity",
+        "value": 151560,
+        "contributions": 300
+      },
+      {
+        "owner": "Client1",
+        "type": "Annuity",
+        "provider": "Prudential",
+        "value": 59000,
+        "contributions": 28.50
+      },
+      {
+        "owner": "Client2",
+        "type": "401k",
+        "provider": "Employer",
+        "value": 10000
+      }
+    ],
+    "other_assets": [
+      {
+        "owner": "Joint",
+        "description": "50% share vacation condo",
+        "location": "Sarasota, Florida",
+        "current_value": "Not specified",
+        "mortgage_free": true
+      },
+      {
+        "owner": "Client2", 
+        "description": "Inheritance",
+        "current_value": 33000,
+        "availability_date": "July 2025"
+      }
+    ],
+    "objectives": {
+      "retirement_date": "December 31, 2025",
+      "target_annual_income": 36000,
+      "breakdown": "12k Social Security each + 12k private income for Jerome",
+      "risk_tolerance": "Moderate (4/5), but conservative for retirement",
+      "key_goals": [
+        "Systematic withdrawals until Social Security kicks in",
+        "Consider annuity vs systematic withdrawals",
+        "50% survivor benefit for spouse"
+      ]
+    }
+  }
