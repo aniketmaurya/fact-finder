@@ -44,7 +44,7 @@ I have used GEval to evaluate the correctness of the output. It's a technique to
 
 #### V2
 
-Set the temperature to 0.1 (before 0.7) to reduce hallucinations and contradictions in the output.
+Set the temperature to 0.1 (before 0.7) so that the LLM is more deterministic but still allow some creativity.
 
 **Result:**
   - New score: 0.5215555934235321
