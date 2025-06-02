@@ -33,21 +33,25 @@ python fact_finder.py sample_transcript.txt > out.json
 
 ## Latest Result
 
-- GEval correctness: ↑ from 0.48 to 0.49 after adding chain-of-thought to the system prompt (see 03_eval.ipynb).
+I have used GEval to evaluate the correctness of the output. It's a technique to evaluate the correctness of the output by comparing the output with the ground truth with LLM-as-a-judge.
+
+- GEval correctness: ⬆︎ from 0.48 to 0.49 after adding chain-of-thought to the system prompt (see 03_eval.ipynb).
 
 #### What changed?
 
 - Added detailed prompt with extensive reasoning to the system prompt to reduce hallucinations and contradictions in the output.
 
 
-#### After
-**System prompt:** as in `fact_finder.py` - adds reasoning to the system prompt.
+#### V2
+
+Set the temperature to 0.1 (before 0.7) to reduce hallucinations and contradictions in the output.
 
 **Result:**
-  - ❌ Correctness (GEval) (score: 0.4899010086693044, threshold: 0.5, strict: False, evaluation model: gpt-4o, reason: No contradiction but missing secondary client and additional details like last name and address. 'Salary' named as 'Employment Income', and additional objectives goals omitted., error: None)
+  - New score: 0.5215555934235321
 
+#### v1
 
-#### Before
+Updated the following fact finding system prompt to a longer prompt with extensive reasoning to reduce hallucinations and contradictions in the output as in `fact_finder.py`.
 
 ```python
 SYSTEM_PROMPT = (
@@ -58,8 +62,8 @@ SYSTEM_PROMPT = (
 )
 ```
 **Result:**
-
-  - ❌ Correctness (GEval) (score: 0.47527727471344206, threshold: 0.5, strict: False, evaluation model: gpt-4o, reason: Missing personal details for both clients and no mention of 'Salary' in incomes. 'Liquid Savings' and 'Primary Residence' differ in capitalization, and absence of 'Mortgage'., error: None)
+  - Base score: 0.47527727471344206
+  - New score: 0.4899010086693044
 
 
 ## Future improvements

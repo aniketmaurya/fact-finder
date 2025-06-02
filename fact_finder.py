@@ -373,7 +373,7 @@ Remember: Your output will be used for regulatory documentation and client advic
 """
 
 
-def find_facts(transcript: str) -> FinalAnswer:
+def find_facts(transcript: str) -> FactFind:
     """Returns a FinalAnswer object containing the fact-find data and the steps taken to extract it."""
     client = OpenAI()
     response = client.responses.parse(
@@ -382,8 +382,8 @@ def find_facts(transcript: str) -> FinalAnswer:
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": transcript},
         ],
-        temperature=0.5,
-        text_format=FinalAnswer,
+        temperature=0.1,
+        text_format=FactFind,
     )
     return response.output_parsed
 
